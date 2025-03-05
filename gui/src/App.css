@@ -1,0 +1,159 @@
+/* App.css */
+html, body {
+  margin: 0;
+  height: 100%;
+  /* Убрали overflow: hidden для скролла */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 30px 0;
+  padding: 20px;
+  /* Убрали background с прозрачностью */
+  width: 100%;
+}
+
+.teams-container {
+  display: flex;
+  justify-content: center; /* Выравнивание по центру */
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap; /* Перенос на новую строку при необходимости */
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px; /* Ограничение ширины */
+  width: 100%;
+}
+
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  /* Убрали background с прозрачностью */
+  width: 100%;
+}
+
+.flip-all-button {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  background: #4ca1af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.first-card {
+  position: relative;
+}
+
+.first-card::after {
+  content: "★";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: red;
+  font-size: 24px;
+  z-index: 100;
+}
+
+/* PlayerCard.css */
+.input-group {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 12px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4ca1af;
+  box-shadow: 0 0 5px rgba(76, 161, 175, 0.5);
+}
+
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: transparent; /* Прозрачный фон */
+  color: white; /* Белый текст */
+  border: 2px solid white; /* Белая рамка */
+  border-radius: 8px; /* Закругленные углы */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 5px auto; /* Выравнивание по центру */
+  width: 200px;
+}
+
+#hit_but{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: transparent; /* Прозрачный фон */
+  color: white; /* Белый текст */
+  border: 2px solid white; /* Белая рамка */
+  border-radius: 8px; /* Закругленные углы */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 5px auto; /* Выравнивание по центру */
+  width: 200px;
+}
+
+/* Эффект при наведении */
+.reset-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Легкий белый фон */
+  transform: scale(1.05); /* Небольшое увеличение */
+}
+
+/* Эффект нажатия */
+.reset-button:active {
+  transform: scale(0.95);
+}
